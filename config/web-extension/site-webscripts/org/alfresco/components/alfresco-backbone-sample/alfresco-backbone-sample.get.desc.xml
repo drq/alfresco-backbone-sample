@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>Alfresco Backbone Sample Component</shortname>
+  <description>Component that renders Alfresco backbone sample.</description>
+  <url>/components/alfresco-backbone-sample</url>
+</webscript>

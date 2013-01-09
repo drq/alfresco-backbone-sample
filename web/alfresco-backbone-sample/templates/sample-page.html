@@ -1,0 +1,29 @@
+<div class="sample-page">
+    <h1>Node Metadata</h1>
+    <table class="sample-table">
+        <tr>
+            <th>Property</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><%= metaData["properties"]["{http://www.alfresco.org/model/content/1.0}name"] %></td>
+        </tr>
+        <tr>
+            <td>Title</td>
+            <td><%= metaData["properties"]["{http://www.alfresco.org/model/content/1.0}title"] %></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><%= metaData["properties"]["{http://www.alfresco.org/model/content/1.0}description"] %></td>
+        </tr>
+        <tr>
+            <td>Last Modified By</td>
+            <td><%= metaData["properties"]["{http://www.alfresco.org/model/content/1.0}modifier"] %></td>
+        </tr>
+        <tr>
+            <td>Last Modified At</td>
+            <td><%= metaData["properties"]["{http://www.alfresco.org/model/content/1.0}modified"] %></td>
+        </tr>
+    </table>
+</div>

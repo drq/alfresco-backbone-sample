@@ -1,0 +1,124 @@
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000000;
+}
+
+.alfresco-backbone-sample-menu {
+    background-color: #313131;
+    background-image: url("images/menu/title-r.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+    border-radius: 5px 5px 5px 5px;
+    clear: both;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.alfresco-backbone-sample-menu-title {
+    background: url("images/menu/title.png") repeat scroll left top transparent;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    margin-right: 4px;
+}
+
+.alfresco-backbone-sample-menu-title h2 {
+    color: #FFFFFF;
+    display: inline;
+    font-size: 1.4em;
+    line-height: 40px;
+    padding: 0 10px;
+    text-shadow: 0 -1px 0 #000000;
+}
+
+.alfresco-backbone-sample-menu-body {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C1C1C1;
+    border-radius: 0 0 5px 5px;
+    border-top: 0px;
+}
+
+.alfresco-backbone-sample-menu-body ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 0;
+}
+
+.alfresco-backbone-sample-menu-body li {
+    overflow: hidden;
+    line-height: 39px;
+}
+
+.alfresco-backbone-sample-menu-body li img {
+    padding-right: 15px;
+}
+
+.alfresco-backbone-sample-menu-body li a {
+    background: url("images/menu/nav-item-bg.png") repeat-x scroll 0 0 transparent;
+    display: block;
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.alfresco-backbone-sample-menu-body li a.active {
+    background: url("images/menu/nav-item-current-bg.png") repeat-x scroll top left transparent;
+}
+
+.alfresco-backbone-sample-menu-body li ul li a.active {
+    background: none scroll top left #3b5060;
+}
+
+.alfresco-backbone-sample-menu-body li a:hover {
+    background: url("images/menu/nav-item-bg.png") repeat-x scroll 0 -39px transparent;
+    color: #ffffff;
+}
+
+.sample-table {
+    border-collapse: collapse;
+    font: 12px/16px arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+}
+
+div.sample-table {
+    border-top: solid 1px #ddd;
+    border-left: solid 1px #ddd;
+}
+
+div.sample-table p {
+    clear: left;
+}
+
+.sample-table td, .sample-table th {
+    border: solid 1px #ddd;
+    margin: 0;
+    padding: 5px;
+}
+
+.sample-table div {
+    border-right: solid 1px #ddd;
+    border-bottom: solid 1px #ddd;
+    float: left;
+    margin: 0;
+    padding: 5px;
+}
+
+.sample-table th, .sample-table div.th {
+    background: #eee;
+    font-weight: bold;
+}
+
+.sample-table div:nth-child(odd) {
+    width: 20px;
+}
+
+.sample-table div:nth-child(even) {
+    width: 50px;
+}
+
+.sample-table div:nth-child(2n+1) {
+    clear: left;
+}

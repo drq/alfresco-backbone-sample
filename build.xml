@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Alfresco Backbone Sample" default="deploy" basedir=".">
+    <property file="custom-build.properties"/>
+
+    <property file="build.properties"/>
+    <property name="project.name" value="alfresco-backbone-sample"/>
+    <property name="module.id" value="com.nxf.alfresco-backbone-sample"/>
+
+    <property name="project.dir" value="."/>
+    <property name="build.dir" value="${project.dir}/build"/>
+    <property name="package.file.zip" value="${build.dir}/${project.name}.zip"/>
+    <property name="package.file.amp" value="${build.dir}/${project.name}.amp"/>
+    <property name="module.dir" value="module"/>
+    <property name="config.dir" value="${project.dir}/config"/>
+    <property name="web.dir" value="${project.dir}/web"/>
+    <property name="extension.dir" value="${config.dir}/web-extension"/>
+
+    <property name="alfresco.web.dir" value="${alfresco.dir}/tomcat/webapps/share"/>
+    <property name="alfresco.mmt.dir" value="${alfresco.dir}/bin"/>
+    <property name="alfresco.war.path" value="${alfresco.dir}/tomcat/webapps/share.war"/>
+
+    <target name="clean" description="Removes all generated files">
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <target name="setup" description="Creates the ${build.dir} directories">
+        <mkdir dir="${build.dir}"/>
+    </target>
+
+    <target name="package-extension" depends="setup"
+            description="Creates a zip called ${package.file.zip} which can be unzipped on top of an exploded Alfresco web app">
+        <delete file="${package.file.zip}"/>
+        <zip destfile="${package.file.zip}" update="true">
+            <zipfileset dir="${config.dir}" prefix="WEB-INF/classes/alfresco"/>
+            <zipfileset dir="${web.dir}" excludes="META-INF/**"/>
+        </zip>
+    </target>
+
+    <target name="package-amp" depends="setup"
+            description="Packages the customizations as an Alfresco module in ${package.file.amp}">
+        <delete file="${package.file.amp}"/>
+        <zip destfile="${package.file.amp}">
+            <zipfileset dir="${web.dir}" prefix="web"/>
+            <zipfileset dir="${config.dir}" prefix="config/alfresco"/>
+            <zipfileset file="${config.dir}/${module.dir}/${module.id}/module.properties"/>
+            <zipfileset file="${config.dir}/${module.dir}/${module.id}/file-mapping.properties"/>
+        </zip>
+    </target>
+
+    <target name="deploy" depends="package-extension"
+            description="Unzips the ${package.file.zip} into ${alfresco.web.dir}">
+        <unzip src="${package.file.zip}" dest="${alfresco.web.dir}"/>
+    </target>
+
+</project>

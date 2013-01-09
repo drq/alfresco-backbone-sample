@@ -1,0 +1,13 @@
+<div class="alfresco-backbone-sample-menu">
+    <div class="alfresco-backbone-sample-menu-title"><h2>Backbone Sample</h2></div>
+    <div class="alfresco-backbone-sample-menu-body">
+        <ul>
+            <% for (var index = 0; index < items.length; index++){ %>
+            <% var item = items[index]; %>
+                <% if (!item.disabled) { %>
+                    <li id="<%= item.id %>" class="alfresco-backbone-sample-menu-item"><a class="<%=item.active ? ' active' : ''%>" href="<%= item.active ? 'javascript:void(0);' : item.route %>"><%= item.title %></a></li>
+                <% }%>
+            <% }%>
+        </ul>
+    </div>
+</div>

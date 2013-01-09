@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+   <title>Alfresco Backbone Sample</title>
+   <description>Alfresco Backbone Sample</description>
+   <template-instance>alfresco-backbone-sample</template-instance>
+   <authentication>user</authentication>
+</page>
