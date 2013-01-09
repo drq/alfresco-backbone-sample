@@ -4,7 +4,7 @@
 
     <property file="build.properties"/>
     <property name="project.name" value="alfresco-backbone-sample"/>
-    <property name="module.id" value="com.nxf.alfresco-backbone-sample"/>
+    <property name="module.id" value="com.nxf.module.alfresco-backbone-sample"/>
 
     <property name="project.dir" value="."/>
     <property name="build.dir" value="${project.dir}/build"/>
